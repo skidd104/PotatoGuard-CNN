@@ -1,0 +1,70 @@
+/* Add your custom styles here */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .form-control {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    width: 150px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Disease info styles */
+  .text-center {
+    text-align: center;
+  }
+  
+  .div-1 {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
+  
+  .div-1 p {
+    margin-bottom: 10px;
+  }
+  
+  .div-1 a {
+    color: #007bff;
+  }
+  
+  .div-1 a:hover {
+    text-decoration: underline;
+  }
+  
