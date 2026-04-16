@@ -21,7 +21,7 @@
         <li><a href="#features">Features</a></li>
       </ul>
     </li>
-     <li><a href="#Model Confusion Matrix">Model Info</a></li>
+     <li><a href="#Model Architecture">Model Info</a></li>
      <li>
       <a href="#installation">Installation</a>
     </li>
@@ -34,7 +34,7 @@
 [![Confusion Screen Shot][cover-screenshot]](https://example.com)
 
 
-PotatoGuard is a full-stack AI-powered web application designed to help farmers and agronomists identify potato leaf diseases in real-time. By leveraging a Convolutional Neural Network (CNN) trained on thousands of plant pathology images, PotatoGuard provides instant diagnosis and actionable treatment recommendations.
+PotatoGuard is a computer vision project centered on a custom-architected Convolutional Neural Network (CNN) designed for the automated classification of Solanum tuberosum (potato) foliar pathologies. The core engine utilizes a deep learning pipeline to distinguish between Early Blight, Late Blight, and Healthy tissue with high precision.
 
 ## Features
 * eal-time Image Analysis: Upload leaf photos and get results in seconds.
@@ -51,14 +51,11 @@ PotatoGuard is a full-stack AI-powered web application designed to help farmers 
 * [![TailwindCSS][Tailwind-badge]][Tailwind-url]
 * [![JavaScript][JS-badge]][JS-url]
 
-## Model & Inference
-1. The core of PotatoGuard is a CNN model trained to identify three distinct states:
-
-2. Early Blight (Alternaria solani)
-
-3. Late Blight (Phytophthora infestans)
-
-4. Healthy
+## Model Architecture
+* Architecture: A multi-layered CNN optimized with Global Average Pooling and Dropout layers to prevent overfitting on specific field backgrounds.
+* Inference Strategy: Employs a Base-Model Inference protocol, bypassing training-time data augmentation to ensure deterministic and stable predictions in production environments.
+* Dataset: Trained on the PlantVillage dataset, involving rigorous preprocessing including color space normalization and target-size rescaling to 224 x 224 pixels.
+* Deployment: Integrated into a Flask-based REST API to demonstrate real-world model serving and edge-case handling.
 
 
 ## Model Confusion Matrix Result
