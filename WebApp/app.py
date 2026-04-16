@@ -1,45 +1,79 @@
-from flask import Flask, render_template, request
-import pickle
+from flask import Flask, render_template, request, url_for
 import tensorflow as tf
-import matplotlib.pyplot as plt
-import os
-import cv2
 import numpy as np
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+import os
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras import datasets, layers, models
-from tensorflow.keras.optimizers import RMSprop
-
-
 
 app = Flask(__name__)
-model = pickle.load(open('models/model_ni_michael_10.pkl', 'rb'))
 
+
+# This tells Flask where the folder is globally
+app.config['UPLOAD_FOLDER'] = 'static/images'
+
+
+# 1. Load the model
+model = tf.keras.models.load_model('./models/modelv2.h5')
+
+model.predict(np.zeros((1, 224, 224, 3)))
+
+# 0: Early Blight (E), 1: Late Blight (L), 2: Healthy (h)
+CLASS_NAMES = ['Early Blight', 'Late Blight', 'Healthy']
 
 @app.route('/', methods=['GET'])
-def hello_world():
-    return render_template('iphone.html')
+def index():
+    return render_template('upload.html')
 
 @app.route('/', methods=['POST'])
 def predict():
-    imagefile= request.files['imagefile']
-    image_path = "./images/" + imagefile.filename
+    if 'imagefile' not in request.files:
+        return render_template('upload.html', prediction="No file uploaded")
+
+    imagefile = request.files['imagefile']
+
+    if not os.path.exists(app.config['UPLOAD_FOLDER']):
+        os.makedirs(app.config['UPLOAD_FOLDER'])
+        
+    image_path = os.path.join(app.config['UPLOAD_FOLDER'], imagefile.filename)
     imagefile.save(image_path)
 
-    img = image.load_img(image_path, target_size=(200,200))
-    img = np.array(img)
-    img = img / 255.0
-
-    img = np.expand_dims(img, axis=0)
-    predictions = model.predict(img)
-
-    predicted_class = np.argmax(predictions, axis=1)
+    # 3. Manual Preprocessing
+    img = image.load_img(image_path, target_size=(224, 224))
+    img_array = image.img_to_array(img)
     
-    print (predicted_class)
+    # Scale pixels from [0, 255] to [-1, 1]
+    img_array = img_array / 127.5
+    img_array = img_array - 1.0
+    
+    img_array = np.expand_dims(img_array, axis=0)
+
+    # 4. Predict
+    predictions = model.predict(img_array)
+    
+    # Check your terminal for these values!
+    print(f"DEBUG - Raw Array: {predictions}")
+    
+    predicted_index = np.argmax(predictions, axis=1)[0]
+    predicted_label = CLASS_NAMES[predicted_index]
+    confidence_formatted = "{:.2f}".format(100 * np.max(predictions))
 
 
-    return render_template('iphone.html', prediction=predicted_class)
+    # We pass 'image_path' relative to the static folder for the <img> tag
+    display_path = url_for('static', filename='images/' + imagefile.filename)
 
+    return render_template(
+        'results.html', 
+        label=predicted_label, 
+        confidence=confidence_formatted, 
+        image_path=display_path
+    )
+
+@app.route('/history')
+def history():
+    return render_template('history.html')
+
+@app.route('/tips')
+def tips():
+    return render_template('tips.html')
 
 if __name__ == '__main__':
-    app.run(port=3000, debug=True)
+    app.run(port=5000, debug=True)
