@@ -110,6 +110,20 @@ Distributed under the project license. See `LICENSE` for more information
 [confusion-matrix-screenshot]: /img/matrix.png
 [cover-screenshot]: /img/cover.png
 
+[contributors-shield]: https://img.shields.io/github/contributors/skidd104/nScript.svg?style=for-the-badge
+[contributors-url]: https://github.com/skidd104/nScript/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/skidd104/nScript.svg?style=for-the-badge
+[forks-url]: https://github.com/skidd104/nScript/network/members
+[stars-shield]: https://img.shields.io/github/stars/skidd104/nScript.svg?style=for-the-badge
+[stars-url]: https://github.com/skidd104/nScript/stargazers
+[issues-shield]: https://img.shields.io/github/issues/skidd104/nScript.svg?style=for-the-badge
+[issues-url]: https://github.com/skidd104/nScript/issues
+[license-shield]: https://img.shields.io/github/license/skidd104/nScript.svg?style=for-the-badge
+[license-url]: https://github.com/skidd104/nScript/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/michael-ian-leguira-a5b9793aa/
+[product-screenshot]: images/cover.png
+
 [Flask-badge]: https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
 [Flask-url]: https://flask.palletsprojects.com/
 [Python-badge]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
