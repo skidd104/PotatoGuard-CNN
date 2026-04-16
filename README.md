@@ -29,7 +29,6 @@
   </ol>
 </details>
 
-
 ## About The Project
 
 [![Confusion Screen Shot][cover-screenshot]](https://example.com)
@@ -107,9 +106,6 @@ Distributed under the project license. See `LICENSE` for more information
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [confusion-matrix-screenshot]: matrix.png
 [cover-screenshot]: cover.png
