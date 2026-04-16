@@ -21,7 +21,7 @@
         <li><a href="#features">Features</a></li>
       </ul>
     </li>
-     <li><a href="#Model Architecture">Model Info</a></li>
+     <li><a href="#Model-Architecture">Model Info</a></li>
      <li>
       <a href="#installation">Installation</a>
     </li>
