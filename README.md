@@ -11,6 +11,8 @@
 
 </div>
 
+<br />
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -36,6 +38,9 @@
 
 
 ## About The Project
+[![Confusion Screen Shot][cover-screenshot]](https://example.com)
+
+
 PotatoGuard is a full-stack AI-powered web application designed to help farmers and agronomists identify potato leaf diseases in real-time. By leveraging a Convolutional Neural Network (CNN) trained on thousands of plant pathology images, PotatoGuard provides instant diagnosis and actionable treatment recommendations.
 
 ## Features
@@ -109,6 +114,7 @@ The model is trained on this https://www.kaggle.com/datasets/muhammadardiputra/p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [confusion-matrix-screenshot]: matrix.png
+[cover-screenshot]: cover.png
 
 [Flask-badge]: https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
 [Flask-url]: https://flask.palletsprojects.com/
