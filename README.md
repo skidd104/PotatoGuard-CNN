@@ -37,6 +37,7 @@
 
 
 ## About The Project
+
 [![Confusion Screen Shot][cover-screenshot]](https://example.com)
 
 
