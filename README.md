@@ -28,9 +28,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#linearalgebra">LinearAlgebra</a></li>
-    <li><a href="#eda">EDA</a></li>
+     <li><a href="#Model Confusion Matrix">Model Info</a></li>
     <li><a href="#license">License</a></li>
   </ol>
 </details>
