@@ -21,14 +21,13 @@
         <li><a href="#features">Features</a></li>
       </ul>
     </li>
-    <li>
+     <li><a href="#Model Confusion Matrix">Model Info</a></li>
+     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-     <li><a href="#Model Confusion Matrix">Model Info</a></li>
     <li><a href="#license">License</a></li>
   </ol>
 </details>
@@ -105,7 +104,11 @@ The model is trained on this https://www.kaggle.com/datasets/muhammadardiputra/p
 
 2. Use the potatoe_leaf_training.ipynb the other is outdated
 
+## License
 
+Distributed under the project license. See `LICENSE` for more information
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
