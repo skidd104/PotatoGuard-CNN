@@ -107,8 +107,8 @@ Distributed under the project license. See `LICENSE` for more information
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-[confusion-matrix-screenshot]: matrix.png
-[cover-screenshot]: cover.png
+[confusion-matrix-screenshot]: /img/matrix.png
+[cover-screenshot]: /img/cover.png
 
 [Flask-badge]: https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
 [Flask-url]: https://flask.palletsprojects.com/
