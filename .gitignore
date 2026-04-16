@@ -1,5 +1,28 @@
+# Environments
 venv/
+.venv/
+env/
+
+# AI/ML - Model Making & Data
+ModelMaking/
 ModelMaking/Overalltest/
 ModelMaking/Potato.zip
-WebApp/static/images/
-.vscode
+
+# WebApp Assets
+WebApp/static/images/*
+# But keep the folder structure by not ignoring the directory itself
+!WebApp/static/images/.gitkeep
+
+# Python System Files
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# IDE Settings
+.vscode/
+.idea/
+.DS_Store
+
+# Environment Variables (Security)
+.env
