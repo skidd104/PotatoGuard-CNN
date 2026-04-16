@@ -23,10 +23,7 @@
     </li>
      <li><a href="#Model Confusion Matrix">Model Info</a></li>
      <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#installation">Installation</a>
     </li>
     <li><a href="#license">License</a></li>
   </ol>
